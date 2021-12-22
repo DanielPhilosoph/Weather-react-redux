@@ -1,9 +1,11 @@
-export const MainReducer = (state, action) => {
+export const MainReducer = (state = [], action) => {
   switch (action.type) {
-    case "GET_COUNTRY":
-      break;
+    case "SET_COUNTRIES":
+      return action.payload.counties;
 
     default:
-      break;
+      return state;
   }
 };
+
+//http://localhost:3000/
