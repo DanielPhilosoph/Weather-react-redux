@@ -25,10 +25,11 @@ export default function Page() {
   console.log("state ", state);
   return (
     <div>
+      <br />
       <h1>Global weather status</h1>
       <hr />
-      <div>Countries: </div>
-      <Card.Group>
+      <br />
+      <Card.Group className="myCards">
         {state.map((country, i) => {
           return <CountryWeather key={i + "key"} country={country} />;
         })}
